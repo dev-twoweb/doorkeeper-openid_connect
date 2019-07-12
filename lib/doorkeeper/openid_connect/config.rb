@@ -1,9 +1,9 @@
 module Doorkeeper
   module OpenidConnect
     def self.configure(&block)
-      if Doorkeeper.configuration.orm != :active_record
-        fail Errors::InvalidConfiguration, 'Doorkeeper OpenID Connect currently only supports the ActiveRecord ORM adapter'
-      end
+      # if Doorkeeper.configuration.orm != :active_record
+      #   fail Errors::InvalidConfiguration, 'Doorkeeper OpenID Connect currently only supports the ActiveRecord ORM adapter'
+      # end
 
       @config = Config::Builder.new(&block).build
     end
